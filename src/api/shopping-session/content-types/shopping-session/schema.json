@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopping_sessions",
+  "info": {
+    "singularName": "shopping-session",
+    "pluralName": "shopping-sessions",
+    "displayName": "ShoppingSession",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uid": {
+      "type": "uid"
+    },
+    "cart_item": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cart-item.cart-item"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "total": {
+      "type": "decimal"
+    }
+  }
+}

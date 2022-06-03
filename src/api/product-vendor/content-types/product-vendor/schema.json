@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_vendors",
+  "info": {
+    "singularName": "product-vendor",
+    "pluralName": "product-vendors",
+    "displayName": "ProductVendor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uid": {
+      "type": "uid"
+    },
+    "company_code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "address_street": {
+      "type": "string"
+    },
+    "address_city": {
+      "type": "string"
+    },
+    "address_street_no": {
+      "type": "string"
+    },
+    "address_state": {
+      "type": "string"
+    },
+    "address_postal_code": {
+      "type": "string"
+    },
+    "address_country_code": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "product_vendors"
+    }
+  }
+}

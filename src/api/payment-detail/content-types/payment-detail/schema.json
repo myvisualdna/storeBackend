@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_details",
+  "info": {
+    "singularName": "payment-detail",
+    "pluralName": "payment-details",
+    "displayName": "PaymentDetail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uid": {
+      "type": "uid"
+    },
+    "order_detail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order-detail.order-detail"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "paid": {
+      "type": "boolean"
+    }
+  }
+}
